@@ -50,4 +50,20 @@ class PublicationModel
                 
         return $data;
     }
+
+    public function getPublicationByCatergory($article_type, $categories, $published)
+    {
+        $data = DB::connection('mysql2')
+                ->table('article_categories')
+                ->select('articles.*')
+                ->leftJoin('articles', 'articles.article_id', '=', 'article_categories.article_id')
+                ->leftJoin('categories', 'categories.category_id', '=', 'article_categories.category_id')
+                ->where('articles.article_type', '=', $article_type)
+                ->where('articles.published', '=', $published)
+                ->whereIn('categories.uri', $categories)
+                ->orderBy('posted_date', 'DESC')
+                ->get();
+
+        return $data;
+    }
 }
