@@ -93,6 +93,17 @@ th {
         </tr>
         <tr>
             <td></td>
+            <td></td>
+            <td>Get By Categories {Publication}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/categories/publication?category={param}" target="_blank">
+                    {{ env('APP_URL') }}get/categories/publication?category={param}
+                </a>
+            </td>
+            <td>parameter is: article_id => {502}</td>
+        </tr>
+        <tr>
+            <td></td>
             <td>News And Views</td>
             <td><a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a></td>
             <td></td>
