@@ -66,4 +66,16 @@ class PublicationModel
 
         return $data;
     }
+
+    public function getCategory($category_type)
+    {
+        $data = DB::connection('mysql2')
+                ->table('categories')
+                ->select('*')
+                ->where('category_type', $category_type)
+                ->where('published', 1)
+                ->get();;
+
+        return $data;
+    }
 }
