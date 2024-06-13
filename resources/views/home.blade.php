@@ -1,6 +1,6 @@
 <style type="text/css">
 h1 {
-    color: #c00;
+    color: #0F3979;
     font-family: sans-serif;
     font-size: 2em;
     margin-bottom: 0;
