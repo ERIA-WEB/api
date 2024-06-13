@@ -77,4 +77,19 @@ class PublicationsController extends Controller
 
         return response()->json($data, 200);
     }
+
+    public function renderCategories(Request $request)
+    {
+        $published = 1;
+        $article_type = 'publications';
+        $category_type = 'pubtypes';
+
+        $data = $this->publication->getCategory($category_type);
+
+        if (empty($data) OR count($data) == 0) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+    }
 }
