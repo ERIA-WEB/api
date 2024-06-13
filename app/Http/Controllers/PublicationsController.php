@@ -56,7 +56,7 @@ class PublicationsController extends Controller
         
         $data = $this->publication->getOneByArticleID($article_id, $article_type);
         
-        if (empty($data) OR count($data) == 0) {
+        if (empty($data)) {
             return response()->json(['message' => 'Data not found'], 404);
         }
 
