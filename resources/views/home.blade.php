@@ -48,14 +48,14 @@ th {
             <td>ERIA Modules</td>
             <td></td>
             <td></td>
-            <td><a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a></td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td>Publication</td>
             <td></td>
-            <td><a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a></td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
@@ -96,16 +96,28 @@ th {
             <td></td>
             <td>Get By Categories {Publication}</td>
             <td>
-                <a href="{{ env('APP_URL') }}get/categories/publication?category={param}" target="_blank">
-                    {{ env('APP_URL') }}get/categories/publication?category={param}
+                <a href="{{ env('APP_URL') }}get/category/publication?category={param}" target="_blank">
+                    {{ env('APP_URL') }}get/category/publication?category={param}
                 </a>
             </td>
-            <td>parameter is: article_id => {502}</td>
+            <td>parameter is: category => {annual-reports,books,co-publications} OR {annual-reports}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get {Categories) in {Publication}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/categories/publication" target="_blank">
+                    {{ env('APP_URL') }}get/categories/publication
+                </a>
+            </td>
+            <td>parameter is:</td>
         </tr>
         <tr>
             <td></td>
             <td>News And Views</td>
-            <td><a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a></td>
+            <td></td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
