@@ -21,6 +21,7 @@ $app->get('/', 					'ContentController@index');
 ** Url API for Publications DB ERIA
 */ 
 
-$app->get('/get/all/publication', 	'PublicationsController@renderPublications');
-$app->get('/get/uri/publication', 	'PublicationsController@renderPublicationByURI');
-$app->get('/get/id/publication', 	'PublicationsController@renderPublicationByArticleID');
+$app->get('/get/all/publication', 	        'PublicationsController@renderPublications');
+$app->get('/get/uri/publication', 	        'PublicationsController@renderPublicationByURI');
+$app->get('/get/id/publication', 	        'PublicationsController@renderPublicationByArticleID');
+$app->get('/get/category/publication', 	'PublicationsController@renderPublicationByCategory');      
