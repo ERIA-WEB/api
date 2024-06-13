@@ -26,7 +26,7 @@ td {
 }
 
 th {
-    background-color: #FF6443;
+    background-color: #0F3979;
     color: #fff;
 }
 </style>
