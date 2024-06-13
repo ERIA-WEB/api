@@ -24,4 +24,5 @@ $app->get('/', 					'ContentController@index');
 $app->get('/get/all/publication', 	        'PublicationsController@renderPublications');
 $app->get('/get/uri/publication', 	        'PublicationsController@renderPublicationByURI');
 $app->get('/get/id/publication', 	        'PublicationsController@renderPublicationByArticleID');
-$app->get('/get/category/publication', 	'PublicationsController@renderPublicationByCategory');      
+$app->get('/get/category/publication', 	    'PublicationsController@renderPublicationByCategory');      
+$app->get('/get/categories/publication', 	'PublicationsController@renderCategories');      
