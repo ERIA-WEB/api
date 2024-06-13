@@ -28,7 +28,7 @@ class PublicationsController extends Controller
         $published = 1;
         $article_type = 'publications';
         $data = $this->publication->getAll($published, $article_type);
-        if (empty($data)) {
+        if (empty($data) OR count($data) == 0) {
             return response()->json(['message' => 'Data not found'], 404);
         }
 
@@ -42,7 +42,7 @@ class PublicationsController extends Controller
         
         $data = $this->publication->getOneBySlug($uri, $article_type);
         
-        if (empty($data)) {
+        if (empty($data) OR count($data) == 0) {
             return response()->json(['message' => 'Data not found'], 404);
         }
 
@@ -56,7 +56,22 @@ class PublicationsController extends Controller
         
         $data = $this->publication->getOneByArticleID($article_id, $article_type);
         
-        if (empty($data)) {
+        if (empty($data) OR count($data) == 0) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+    }
+
+    public function renderPublicationByCategory(Request $request)
+    {
+        $published = 1;
+        $article_type = 'publications';
+        $categories = explode(',', $request->get('category', false));
+
+        $data = $this->publication->getPublicationByCatergory($article_type, $categories, $published);
+        
+        if (empty($data) OR count($data) == 0) {
             return response()->json(['message' => 'Data not found'], 404);
         }
 
