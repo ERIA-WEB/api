@@ -51,7 +51,8 @@ th {
             <td></td>
             <td></td>
         </tr>
-        <tr>
+        <!-- Publication -->
+        <tr style="background-color: #0F3979; color: #fff;">
             <td></td>
             <td>Publication</td>
             <td></td>
@@ -113,7 +114,9 @@ th {
             </td>
             <td>parameter is:</td>
         </tr>
-        <tr>
+        <!-- Ends -->
+        <!-- News and Views -->
+        <tr style="background-color: #0F3979; color: #fff;">
             <td></td>
             <td>News And Views</td>
             <td></td>
@@ -122,16 +125,178 @@ th {
         </tr>
         <tr>
             <td></td>
-            <td>Events</td>
-            <td><a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a>
-            </td>
+            <td></td>
+            <td>Get All {News and Views}</td>
+            <td></td>
             <td></td>
         </tr>
-        <!-- Module AZEC -->
         <tr>
+            <td></td>
+            <td></td>
+            <td>Get By ID {News and Views}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By URI {News and Views}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By Categories {News and Views}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get {Categories} in {News and Views}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Ends -->
+        <!-- Database and Programmes -->
+        <tr style="background-color: #0F3979; color: #fff;">
+            <td></td>
+            <td>Database and Programmes</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get All {Database and Programmes}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By ID {Database and Programmes}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By URI {Database and Programmes}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By Categories {Database and Programmes}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get {Categories} in {Database and Programmes}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Ends -->
+        <!-- Events -->
+        <tr style="background-color: #0F3979; color: #fff;">
+            <td></td>
+            <td>Events</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get All {Events}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By ID {Events}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By URI {Events}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By Categories {Events}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get {Categories} in {Events}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Ends -->
+        <!-- Database and Programmes -->
+        <tr style="background-color: #0F3979; color: #fff;">
+            <td></td>
+            <td>Multimedia</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get All {Multimedia}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By ID {Multimedia}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By URI {Multimedia}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By Categories {Multimedia}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get {Categories} in {Multimedia}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- Ends -->
+        <!-- Module AZEC -->
+        <tr style="background-color: #0F3979; color: #fff;">
             <td>AZEC Module</td>
             <td></td>
-            <td><a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a></td>
+            <td></td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
@@ -139,25 +304,31 @@ th {
             <td>About</td>
             <td><a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a></td>
             <td></td>
+            <td></td>
         </tr>
         <tr>
             <td></td>
             <td>Work</td>
             <td><a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a></td>
             <td></td>
+            <td></td>
         </tr>
         <tr>
             <td></td>
             <td>Alliances</td>
-            <td><a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a>
+            <td>
+                <a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a>
             </td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td>Grapich Result</td>
-            <td><a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a>
+            <td>
+                <a href="{{ env('APP_URL') }}" target="_blank">{{ env('APP_URL') }}</a>
             </td>
+            <td></td>
             <td></td>
         </tr>
     </tbody>
