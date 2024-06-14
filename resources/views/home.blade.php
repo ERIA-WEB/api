@@ -195,37 +195,62 @@ th {
         <tr>
             <td></td>
             <td></td>
-            <td>Get All {Database and Programmes}</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>Get By ID {Database and Programmes}</td>
-            <td></td>
+            <td>Get All {Database And Programmes}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/all/database-and-programmes" target="_blank">
+                    {{ env('APP_URL') }}get/all/database-and-programmes
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
-            <td>Get By URI {Database and Programmes}</td>
-            <td></td>
-            <td></td>
+            <td>Get By URI {Database And Programmes}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/uri/database-and-programmes?uri={param}" target="_blank">
+                    {{ env('APP_URL') }}get/uri/database-and-programmes?uri={param}
+                </a>
+            </td>
+            <td>
+                parameter is: uri => {signing-of-mou-between-eria-and-universiti-brunei-darussalam}
+            </td>
         </tr>
         <tr>
             <td></td>
             <td></td>
-            <td>Get By Categories {Database and Programmes}</td>
-            <td></td>
-            <td></td>
+            <td>Get By ID {Database And Programmes}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/id/database-and-programmes?article_id={param}" target="_blank">
+                    {{ env('APP_URL') }}get/id/database-and-programmes?article_id={param}
+                </a>
+            </td>
+            <td>parameter is: article_id => {8942}</td>
         </tr>
         <tr>
             <td></td>
             <td></td>
-            <td>Get {Categories} in {Database and Programmes}</td>
+            <td>Get By Categories {Database And Programmes}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/category/database-and-programmes?category={param}" target="_blank">
+                    {{ env('APP_URL') }}get/category/database-and-programmes?category={param}
+                </a>
+            </td>
+            <td>parameter is: category =>
+                {eria-digital-innovation-and-sustainable-economy-centre,healthcare-unit,regional-knowledge-centre-for-marine-plastic-debris,medical-excellence-in-asia}
+                OR {eria-digital-innovation-and-sustainable-economy-centre}
+            </td>
+        </tr>
+        <tr>
             <td></td>
             <td></td>
+            <td>Get {Categories) in {Database And Programmes}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/categories/database-and-programmes" target="_blank">
+                    {{ env('APP_URL') }}get/categories/database-and-programmes
+                </a>
+            </td>
+            <td>parameter is:</td>
         </tr>
         <!-- Ends -->
         <!-- Events -->
