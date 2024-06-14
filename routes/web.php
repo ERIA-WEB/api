@@ -36,3 +36,13 @@ $app->get('/get/uri/news-and-views', 	        'NewsAndViewsController@renderNews
 $app->get('/get/id/news-and-views', 	        'NewsAndViewsController@renderNewsAndViewsByArticleID');
 $app->get('/get/category/news-and-views', 	    'NewsAndViewsController@renderNewsAndViewsByCategory');      
 $app->get('/get/categories/news-and-views', 	'NewsAndViewsController@renderCategories');    
+
+/*
+** Url API for Database And Programmes DB ERIA
+*/ 
+
+$app->get('/get/all/database-and-programmes', 	        'DatabaseAndProgrammesController@renderDatabaseAndProgrammes');
+$app->get('/get/uri/database-and-programmes', 	        'DatabaseAndProgrammesController@renderDatabaseAndProgrammesByURI');
+$app->get('/get/id/database-and-programmes', 	        'DatabaseAndProgrammesController@renderDatabaseAndProgrammesByArticleID');
+$app->get('/get/category/database-and-programmes', 	    'DatabaseAndProgrammesController@renderDatabaseAndProgrammesByCategory');      
+$app->get('/get/categories/database-and-programmes', 	'DatabaseAndProgrammesController@renderCategories');   
