@@ -62,17 +62,6 @@ th {
         <tr>
             <td></td>
             <td></td>
-            <td>Get By URI {Publication}</td>
-            <td>
-                <a href="{{ env('APP_URL') }}get/uri/publication?uri={param}" target="_blank">
-                    {{ env('APP_URL') }}get/uri/publication?uri={param}
-                </a>
-            </td>
-            <td>parameter is: uri => {financial-reforms-in-myanmar-and-japans-engagement}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
             <td>Get All {Publication}</td>
             <td>
                 <a href="{{ env('APP_URL') }}get/all/publication" target="_blank">
@@ -81,6 +70,18 @@ th {
             </td>
             <td></td>
         </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get By URI {Publication}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/uri/publication?uri={param}" target="_blank">
+                    {{ env('APP_URL') }}get/uri/publication?uri={param}
+                </a>
+            </td>
+            <td>parameter is: uri => {financial-reforms-in-myanmar-and-japans-engagement}</td>
+        </tr>
+
         <tr>
             <td></td>
             <td></td>
@@ -126,37 +127,61 @@ th {
         <tr>
             <td></td>
             <td></td>
-            <td>Get All {News and Views}</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>Get By ID {News and Views}</td>
-            <td></td>
+            <td>Get All {News And Views}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/all/news-and-views" target="_blank">
+                    {{ env('APP_URL') }}get/all/news-and-views
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td>Get By URI {News and Views}</td>
-            <td></td>
-            <td></td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/uri/news-and-views?uri={param}" target="_blank">
+                    {{ env('APP_URL') }}get/uri/news-and-views?uri={param}
+                </a>
+            </td>
+            <td>
+                parameter is: uri => {visit-of-meti-minister-of-japan-he-mr-masayuki-naoshima}
+            </td>
         </tr>
         <tr>
             <td></td>
             <td></td>
-            <td>Get By Categories {News and Views}</td>
-            <td></td>
-            <td></td>
+            <td>Get By ID {News And Views}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/id/news-and-views?article_id={param}" target="_blank">
+                    {{ env('APP_URL') }}get/id/news-and-views?article_id={param}
+                </a>
+            </td>
+            <td>parameter is: article_id => {3961}</td>
         </tr>
         <tr>
             <td></td>
             <td></td>
-            <td>Get {Categories} in {News and Views}</td>
+            <td>Get By Categories {News And Views}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/category/news-and-views?category={param}" target="_blank">
+                    {{ env('APP_URL') }}get/category/news-and-views?category={param}
+                </a>
+            </td>
+            <td>parameter is: category => {opinions,in-the-news,press-releases,siia-insights,call-for-proposals,news}
+                OR {opinions}
+            </td>
+        </tr>
+        <tr>
             <td></td>
             <td></td>
+            <td>Get {Categories) in {News And Views}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/categories/news-and-views" target="_blank">
+                    {{ env('APP_URL') }}get/categories/news-and-views
+                </a>
+            </td>
+            <td>parameter is:</td>
         </tr>
         <!-- Ends -->
         <!-- Database and Programmes -->
