@@ -25,4 +25,14 @@ $app->get('/get/all/publication', 	        'PublicationsController@renderPublica
 $app->get('/get/uri/publication', 	        'PublicationsController@renderPublicationByURI');
 $app->get('/get/id/publication', 	        'PublicationsController@renderPublicationByArticleID');
 $app->get('/get/category/publication', 	    'PublicationsController@renderPublicationByCategory');      
-$app->get('/get/categories/publication', 	'PublicationsController@renderCategories');      
+$app->get('/get/categories/publication', 	'PublicationsController@renderCategories');    
+
+/*
+** Url API for News And Views DB ERIA
+*/ 
+
+$app->get('/get/all/news-and-views', 	        'NewsAndViewsController@renderNewsAndViews');
+$app->get('/get/uri/news-and-views', 	        'NewsAndViewsController@renderNewsAndViewsByURI');
+$app->get('/get/id/news-and-views', 	        'NewsAndViewsController@renderNewsAndViewsByArticleID');
+$app->get('/get/category/news-and-views', 	    'NewsAndViewsController@renderNewsAndViewsByCategory');      
+$app->get('/get/categories/news-and-views', 	'NewsAndViewsController@renderCategories');    
