@@ -253,7 +253,7 @@ th {
             <td>parameter is:</td>
         </tr>
         <!-- Ends -->
-        <!-- Events -->
+        <!-- Events  -->
         <tr style="background-color: #0F3979; color: #fff;">
             <td></td>
             <td>Events</td>
@@ -265,36 +265,36 @@ th {
             <td></td>
             <td></td>
             <td>Get All {Events}</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>Get By ID {Events}</td>
-            <td></td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/all/events" target="_blank">
+                    {{ env('APP_URL') }}get/all/events
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td>Get By URI {Events}</td>
-            <td></td>
-            <td></td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/uri/events?uri={param}" target="_blank">
+                    {{ env('APP_URL') }}get/uri/events?uri={param}
+                </a>
+            </td>
+            <td>
+                parameter is: uri => {good-regulatory-practice-for-services-in-the-digital-era}
+            </td>
         </tr>
         <tr>
             <td></td>
             <td></td>
-            <td>Get By Categories {Events}</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>Get {Categories} in {Events}</td>
-            <td></td>
-            <td></td>
+            <td>Get By ID {Events}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/id/events?article_id={param}" target="_blank">
+                    {{ env('APP_URL') }}get/id/events?article_id={param}
+                </a>
+            </td>
+            <td>parameter is: article_id => {8914}</td>
         </tr>
         <!-- Ends -->
         <!-- Database and Programmes -->
