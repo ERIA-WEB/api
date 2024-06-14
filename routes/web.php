@@ -46,3 +46,13 @@ $app->get('/get/uri/database-and-programmes', 	        'DatabaseAndProgrammesCon
 $app->get('/get/id/database-and-programmes', 	        'DatabaseAndProgrammesController@renderDatabaseAndProgrammesByArticleID');
 $app->get('/get/category/database-and-programmes', 	    'DatabaseAndProgrammesController@renderDatabaseAndProgrammesByCategory');      
 $app->get('/get/categories/database-and-programmes', 	'DatabaseAndProgrammesController@renderCategories');   
+
+/*
+** Url API for Events DB ERIA
+*/ 
+
+$app->get('/get/all/events', 	        'EventsController@renderEvents');
+$app->get('/get/uri/events', 	        'EventsController@renderEventsByURI');
+$app->get('/get/id/events', 	        'EventsController@renderEventsByArticleID');
+$app->get('/get/category/events', 	    'EventsController@renderEventsByCategory');      
+$app->get('/get/categories/events', 	'EventsController@renderCategories');   
