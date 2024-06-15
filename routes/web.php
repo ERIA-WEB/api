@@ -56,3 +56,13 @@ $app->get('/get/uri/events', 	        'EventsController@renderEventsByURI');
 $app->get('/get/id/events', 	        'EventsController@renderEventsByArticleID');
 $app->get('/get/category/events', 	    'EventsController@renderEventsByCategory');      
 $app->get('/get/categories/events', 	'EventsController@renderCategories');   
+
+/*
+** Url API for Multimedia DB ERIA
+*/ 
+
+$app->get('/get/all/multimedia', 	        'MultimediaController@renderMultimedia');
+$app->get('/get/uri/multimedia', 	        'MultimediaController@renderMultimediaByURI');
+$app->get('/get/id/multimedia', 	        'MultimediaController@renderMultimediaByArticleID');
+$app->get('/get/category/multimedia', 	    'MultimediaController@renderMultimediaByCategory');      
+$app->get('/get/categories/multimedia', 	'MultimediaController@renderCategories');   
