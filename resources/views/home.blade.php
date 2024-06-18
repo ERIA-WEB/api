@@ -449,8 +449,12 @@ th {
         <tr>
             <td></td>
             <td>About Us</td>
-            <td></td>
-            <td></td>
+            <td>Main {Menu}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/about-us" target="_blank">
+                    {{ env('APP_URL') }}get/about-us
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
