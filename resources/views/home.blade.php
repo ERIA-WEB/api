@@ -373,8 +373,23 @@ th {
         <tr>
             <td></td>
             <td>Programmes</td>
+            <td>Tag {ASEAN}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/programmes/tag/asean" target="_blank">
+                    {{ env('APP_URL') }}get/programmes/tag/asean
+                </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
             <td></td>
             <td></td>
+            <td>Menu Programmes</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/programmes" target="_blank">
+                    {{ env('APP_URL') }}get/programmes
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
