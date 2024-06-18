@@ -79,3 +79,5 @@ $app->get('/get/programmes', 	                'MegaMenuController@renderMenuProg
 $app->get('/get/publication/get/future', 	    'MegaMenuController@renderMenuFuturedPublication');
 $app->get('/get/publication/get/categories', 	'MegaMenuController@renderMenuCategoryPublication');
 $app->get('/get/publication', 	                'MegaMenuController@renderMenuPublication');
+
+$app->get('/get/about-us', 	                    'MegaMenuController@renderMenuAboutUs');
