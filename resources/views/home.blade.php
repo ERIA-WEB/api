@@ -356,7 +356,11 @@ th {
             <td></td>
             <td>Mega Menu</td>
             <td></td>
-            <td></td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/research-areas/topic" target="_blank">
+                    {{ env('APP_URL') }}/get/research-areas/topic
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
