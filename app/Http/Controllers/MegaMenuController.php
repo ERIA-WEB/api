@@ -65,4 +65,45 @@ class MegaMenuController extends Controller
 
         return response()->json($data, 200);
     }
+
+    public function renderMenuFuturedPublication(Request $request)
+    {
+        $type = 'pub';
+
+        $data = $this->mega_menu->getMenuFuturedPublication($type);
+
+        if (empty($data)) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+    }
+
+    public function renderMenuPublication(Request $request)
+    {
+        $article_type = 'publications';
+        $limit = 3;
+        $published = 1;
+        
+        $data = $this->mega_menu->getMenuPublication($article_type, $limit, $published);
+        if (empty($data) OR count($data) == 0) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+    }
+
+    public function renderMenuCategoryPublication(Request $request)
+    {
+        $published = 1;
+        $category_type = 'pubtypes';
+        
+        $data = $this->mega_menu->getMenuCategoryPublication($category_type, $published);
+
+        if (empty($data) OR count($data) == 0) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);   
+    }
 }
