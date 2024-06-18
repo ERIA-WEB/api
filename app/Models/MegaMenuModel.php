@@ -90,4 +90,18 @@ class MegaMenuModel
 
         return $data;
     }
+
+    public function getMenuAboutUs($parent_id, $is_delete, $published)
+    {
+        $data = DB::connection('mysql2')
+                ->table('pages')
+                ->select('*')
+                ->where('parent_id', $parent_id)
+                ->where('published', $published)
+                ->where('is_delete', '!=', $is_delete)
+                ->orderBy('order_id', 'ASC')
+                ->get();
+
+        return $data;
+    }
 }
