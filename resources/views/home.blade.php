@@ -395,8 +395,34 @@ th {
         <tr>
             <td></td>
             <td>Publications</td>
+            <td>Get {Future}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/publication/get/future" target="_blank">
+                    {{ env('APP_URL') }}get/publication/get/future
+                </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
             <td></td>
             <td></td>
+            <td>Get {Categories}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/publication/get/categories" target="_blank">
+                    {{ env('APP_URL') }}get/publication/get/categories
+                </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get {Publication Latest}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/publication" target="_blank">
+                    {{ env('APP_URL') }}get/publication
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
