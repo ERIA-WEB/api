@@ -80,11 +80,8 @@ class MultimediaController extends Controller
 
     public function renderCategories(Request $request)
     {
-        $published = 1;
-        $article_type = 'multimedia';
-        $category_type = 'categories';
 
-        $data = $this->multimedia->getCategory($category_type, $published);
+        $data = ['webinar', 'video', 'podcasts'];
 
         if (empty($data) OR count($data) == 0) {
             return response()->json(['message' => 'Data not found'], 404);
