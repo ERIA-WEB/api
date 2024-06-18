@@ -72,3 +72,5 @@ $app->get('/get/categories/multimedia', 	'MultimediaController@renderCategories'
 */ 
 
 $app->get('/get/research-areas/topic', 	        'MegaMenuController@renderResearchAreas');
+$app->get('/get/programmes/tag/asean', 	        'MegaMenuController@renderMenuAseanProgrammes');
+$app->get('/get/programmes', 	                'MegaMenuController@renderMenuProgrammes');
