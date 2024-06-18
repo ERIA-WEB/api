@@ -66,3 +66,9 @@ $app->get('/get/uri/multimedia', 	        'MultimediaController@renderMultimedia
 $app->get('/get/id/multimedia', 	        'MultimediaController@renderMultimediaByArticleID');
 $app->get('/get/category/multimedia', 	    'MultimediaController@renderMultimediaByCategory');      
 $app->get('/get/categories/multimedia', 	'MultimediaController@renderCategories');   
+
+/*
+** Url API for Mega Menu DB ERIA
+*/ 
+
+$app->get('/get/research-areas/topic', 	        'MegaMenuController@renderResearchAreas');
