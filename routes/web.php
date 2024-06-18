@@ -72,5 +72,10 @@ $app->get('/get/categories/multimedia', 	'MultimediaController@renderCategories'
 */ 
 
 $app->get('/get/research-areas/topic', 	        'MegaMenuController@renderResearchAreas');
+
 $app->get('/get/programmes/tag/asean', 	        'MegaMenuController@renderMenuAseanProgrammes');
 $app->get('/get/programmes', 	                'MegaMenuController@renderMenuProgrammes');
+
+$app->get('/get/publication/get/future', 	    'MegaMenuController@renderMenuFuturedPublication');
+$app->get('/get/publication/get/categories', 	'MegaMenuController@renderMenuCategoryPublication');
+$app->get('/get/publication', 	                'MegaMenuController@renderMenuPublication');
