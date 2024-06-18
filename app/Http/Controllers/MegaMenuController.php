@@ -106,4 +106,19 @@ class MegaMenuController extends Controller
 
         return response()->json($data, 200);   
     }
+
+    public function renderMenuAboutUs(Request $request)
+    {
+        $parent_id = 7;
+        $published = 1;
+        $is_delete = 1;
+        
+        $data = $this->mega_menu->getMenuAboutUs($parent_id, $is_delete, $published);
+
+        if (empty($data) OR count($data) == 0) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);   
+    }
 }
