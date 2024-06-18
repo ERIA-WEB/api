@@ -309,38 +309,133 @@ th {
             <td></td>
             <td></td>
             <td>Get All {Multimedia}</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>Get By ID {Multimedia}</td>
-            <td></td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/all/multimedia" target="_blank">
+                    {{ env('APP_URL') }}get/all/multimedia
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td>Get By URI {Multimedia}</td>
-            <td></td>
-            <td></td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/uri/multimedia?uri={param}" target="_blank">
+                    {{ env('APP_URL') }}get/uri/multimedia?uri={param}
+                </a>
+            </td>
+            <td>
+                parameter is: uri => {Ensuring-Digital-Transformation-Development-for-All}
+            </td>
         </tr>
         <tr>
             <td></td>
             <td></td>
-            <td>Get By Categories {Multimedia}</td>
-            <td></td>
-            <td></td>
+            <td>Get By ID {Multimedia}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/id/multimedia?article_id={param}" target="_blank">
+                    {{ env('APP_URL') }}get/id/multimedia?article_id={param}
+                </a>
+            </td>
+            <td>parameter is: article_id => {8151}</td>
         </tr>
         <tr>
             <td></td>
             <td></td>
-            <td>Get {Categories} in {Multimedia}</td>
-            <td></td>
-            <td></td>
+            <td>Get {Categories) in {Multimedia}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/categories/multimedia" target="_blank">
+                    {{ env('APP_URL') }}get/categories/multimedia
+                </a>
+            </td>
+            <td>parameter is: {webinar, video, podcasts}</td>
         </tr>
         <!-- Ends -->
+        <tr style="background-color: #0F3979; color: #fff;">
+            <td></td>
+            <td>Mega Menu</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Research Areas</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Programmes</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Publications</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Updates</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Events</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Multimedia</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>About Us</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>People</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Press Room</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Contact</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Searching</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
         <!-- Module AZEC -->
         <tr style="background-color: #0F3979; color: #fff;">
             <td>AZEC Module</td>
