@@ -53,4 +53,41 @@ class MegaMenuModel
 
         return $data;
     }
+
+    public function getMenuFuturedPublication($type)
+    {
+        $data = DB::connection('mysql2')
+                ->table('articles')
+                ->select('*')
+                ->where('feature', $type)
+                ->first();
+
+        return $data;
+    }
+
+    public function getMenuPublication($article_type, $limit, $published)
+    {
+        $data = DB::connection('mysql2')
+                ->table('articles')
+                ->select('*')
+                ->where('article_type', $article_type)
+                ->where('published', $published)
+                ->orderBy('posted_date', 'DESC')
+                ->limit($limit)
+                ->get();
+
+        return $data;
+    }
+
+    public function getMenuCategoryPublication($category_type, $published)
+    {
+        $data = DB::connection('mysql2')
+                ->table('categories')
+                ->select('*')
+                ->where('category_type', $category_type)
+                ->where('published', $published)
+                ->get();
+
+        return $data;
+    }
 }
