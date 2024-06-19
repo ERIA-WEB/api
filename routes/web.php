@@ -78,6 +78,10 @@ $app->get('/get/programmes', 	                'MegaMenuController@renderMenuProg
 
 $app->get('/get/publication/get/future', 	    'MegaMenuController@renderMenuFuturedPublication');
 $app->get('/get/publication/get/categories', 	'MegaMenuController@renderMenuCategoryPublication');
-$app->get('/get/publication', 	                'MegaMenuController@renderMenuPublication');
+$app->get('/get/publication/latest', 	        'MegaMenuController@renderMenuLatestPublication');
+
+$app->get('/get/updates/get/categories', 	    'MegaMenuController@renderMenuCategoryUpdates');
+$app->get('/get/updates/get/future', 	        'MegaMenuController@renderMenuFuturedUpdates');
+$app->get('/get/updates/latest', 	            'MegaMenuController@renderMenuLatestUpdates');
 
 $app->get('/get/about-us', 	                    'MegaMenuController@renderMenuAboutUs');
