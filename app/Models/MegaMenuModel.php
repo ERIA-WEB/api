@@ -91,6 +91,30 @@ class MegaMenuModel
         return $data;
     }
 
+    public function getMenuLatestUpdates($article_type, $limit, $published)
+    {
+        $data = DB::connection('mysql2')
+                ->table('articles')
+                ->where('article_type', $article_type)
+                ->where('published', $published)
+                ->orderBy('posted_date', 'DESC')
+                ->limit($limit)
+                ->get();;
+
+        return $data;
+    }
+
+    public function getMenuCategoryUpdates($category_type, $published)
+    {
+        $data = DB::connection('mysql2')
+                ->table('categories')
+                ->where('category_type', $category_type)
+                ->where('published', $published)
+                ->get();
+
+        return $data;
+    }
+
     public function getMenuFuturedUpdate($feature)
     {
         $data = DB::connection('mysql2')
