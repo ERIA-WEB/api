@@ -84,4 +84,13 @@ $app->get('/get/updates/get/categories', 	    'MegaMenuController@renderMenuCate
 $app->get('/get/updates/get/future', 	        'MegaMenuController@renderMenuFuturedUpdates');
 $app->get('/get/updates/latest', 	            'MegaMenuController@renderMenuLatestUpdates');
 
+$app->get('/get/events/get/upcoming',           'MegaMenuController@renderMenuUpcomingEvents');
+$app->get('/get/events/get/past',               'MegaMenuController@renderMenuPastEvents');
+$app->get('/get/events/get/event-video',        'MegaMenuController@renderMenuVideoEvents');
+$app->get('/get/events/get/event-report',       'MegaMenuController@renderMenuReportEvents');
+
+$app->get('/get/multimedia/get/categories', 	    'MegaMenuController@renderMenuCategoryMultimedia');
+$app->get('/get/multimedia/get/future', 	        'MegaMenuController@renderMenuFuturedMultimedia');
+$app->get('/get/multimedia/latest', 	            'MegaMenuController@renderMenuLatestMultimedia');
+
 $app->get('/get/about-us', 	                    'MegaMenuController@renderMenuAboutUs');
