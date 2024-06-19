@@ -79,7 +79,7 @@ class MegaMenuController extends Controller
         return response()->json($data, 200);
     }
 
-    public function renderMenuPublication(Request $request)
+    public function renderMenuLatestPublication(Request $request)
     {
         $article_type = 'publications';
         $limit = 3;
@@ -105,6 +105,29 @@ class MegaMenuController extends Controller
         }
 
         return response()->json($data, 200);   
+    }
+
+    public function renderMenuLatestUpdates(Request $request)
+    {
+
+    }
+
+    public function renderMenuCategoryUpdates(Request $request)
+    {
+
+    }
+
+    public function renderMenuFuturedUpdates(Request $request)
+    {
+        $feature = 'updates';
+
+        $data = $this->mega_menu->getMenuFuturedUpdate($feature);
+
+        if (empty($data) OR count($data) == 0) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
     }
 
     public function renderMenuAboutUs(Request $request)
