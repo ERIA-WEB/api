@@ -461,15 +461,78 @@ th {
         <tr>
             <td></td>
             <td>Events</td>
+            <td>Get {Upcoming}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/events/get/upcoming" target="_blank">
+                    {{ env('APP_URL') }}get/events/get/upcoming
+                </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
             <td></td>
             <td></td>
+            <td>Get {Past}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/events/get/past" target="_blank">
+                    {{ env('APP_URL') }}get/events/get/past
+                </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get {Events Video}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/events/get/event-video" target="_blank">
+                    {{ env('APP_URL') }}get/events/get/event-video
+                </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get {Events Reports}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/events/get/event-report" target="_blank">
+                    {{ env('APP_URL') }}get/events/get/event-report
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td>Multimedia</td>
+            <td>Get {Future}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/multimedia/get/future" target="_blank">
+                    {{ env('APP_URL') }}get/multimedia/get/future
+                </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
             <td></td>
             <td></td>
+            <td>Get {Categories}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/multimedia/get/categories" target="_blank">
+                    {{ env('APP_URL') }}get/multimedia/get/categories
+                </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get {Multimedia Latest}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/multimedia/latest" target="_blank">
+                    {{ env('APP_URL') }}get/multimedia/latest
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
