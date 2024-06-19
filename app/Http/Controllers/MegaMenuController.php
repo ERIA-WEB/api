@@ -109,12 +109,31 @@ class MegaMenuController extends Controller
 
     public function renderMenuLatestUpdates(Request $request)
     {
+        $article_type = 'news';
+        $limit = 3;
+        $published = 1;
 
+        $data = $this->mega_menu->getMenuLatestUpdates($article_type, $limit, $published);
+
+        if (empty($data) OR count($data) == 0) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);  
     }
 
     public function renderMenuCategoryUpdates(Request $request)
     {
+        $category_type = 'newscategories';
+        $published = 1;
+        
+        $data = $this->mega_menu->getMenuCategoryUpdates($category_type, $published);
 
+        if (empty($data) OR count($data) == 0) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);  
     }
 
     public function renderMenuFuturedUpdates(Request $request)
@@ -123,7 +142,7 @@ class MegaMenuController extends Controller
 
         $data = $this->mega_menu->getMenuFuturedUpdate($feature);
 
-        if (empty($data) OR count($data) == 0) {
+        if (empty($data)) {
             return response()->json(['message' => 'Data not found'], 404);
         }
 
