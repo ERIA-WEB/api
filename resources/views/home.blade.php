@@ -549,8 +549,12 @@ th {
         <tr>
             <td></td>
             <td>People</td>
-            <td></td>
-            <td></td>
+            <td>Main {Menu}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/people/get/categories" target="_blank">
+                    {{ env('APP_URL') }}get/people/get/categories
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
