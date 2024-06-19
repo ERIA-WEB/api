@@ -236,4 +236,16 @@ class MegaMenuModel
 
         return $data;
     }
+
+    public function getMenuCategoryPeople($parent)
+    {
+        $data = DB::connection('mysql2')
+                ->table('eria_expert_categories')
+                ->select('category', 'slug')
+                ->where('parent', $parent)
+                ->where('slug', '!=', 'unclassified')
+                ->get();
+
+        return $data;
+    }
 }
