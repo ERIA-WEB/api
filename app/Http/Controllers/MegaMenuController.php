@@ -264,4 +264,17 @@ class MegaMenuController extends Controller
 
         return response()->json($data, 200);   
     }
+
+    public function renderMenuCategoryPeople(Request $request)
+    {
+        $parent = 'experts';
+
+        $data = $this->mega_menu->getMenuCategoryPeople($parent);
+
+        if (empty($data) OR count($data) == 0) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);   
+    }
 }
