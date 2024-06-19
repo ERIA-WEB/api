@@ -419,8 +419,8 @@ th {
             <td></td>
             <td>Get {Publication Latest}</td>
             <td>
-                <a href="{{ env('APP_URL') }}get/publication" target="_blank">
-                    {{ env('APP_URL') }}get/publication
+                <a href="{{ env('APP_URL') }}get/publication/latest" target="_blank">
+                    {{ env('APP_URL') }}get/publication/latest
                 </a>
             </td>
             <td></td>
@@ -428,8 +428,34 @@ th {
         <tr>
             <td></td>
             <td>Updates</td>
+            <td>Get {Future}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/updates/get/future" target="_blank">
+                    {{ env('APP_URL') }}get/updates/get/future
+                </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
             <td></td>
             <td></td>
+            <td>Get {Categories}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/updates/get/categories" target="_blank">
+                    {{ env('APP_URL') }}get/updates/get/categories
+                </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Get {Updates Latest}</td>
+            <td>
+                <a href="{{ env('APP_URL') }}get/updates/latest" target="_blank">
+                    {{ env('APP_URL') }}get/updates/latest
+                </a>
+            </td>
             <td></td>
         </tr>
         <tr>
