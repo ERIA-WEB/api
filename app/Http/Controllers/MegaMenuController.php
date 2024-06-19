@@ -149,6 +149,107 @@ class MegaMenuController extends Controller
         return response()->json($data, 200);
     }
 
+    public function renderMenuUpcomingEvents(Request $request)
+    {
+        $article_type = 'events';
+        $published = 1;
+
+        $today = date('Y-m-d');
+        $type = 'future';
+        $limit = 6;
+
+        $data = $this->mega_menu->getMenuEvents($article_type, $type, $today, $limit, $published);
+
+        if (empty($data)) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+    }
+
+    public function renderMenuPastEvents(Request $request)
+    {
+        $article_type = 'events';
+        $published = 1;
+
+        $today = date('Y-m-d');
+        $type = 'past';
+        $limit = 3;
+
+        $data = $this->mega_menu->getMenuEvents($article_type, $type, $today, $limit, $published);
+
+        if (empty($data)) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+    }
+
+    public function renderMenuVideoEvents(Request $request)
+    {
+        $parent = 'multimedia';
+        $article_type = 'multimedia';
+        $category = 'Webinar';
+        $limit = 2;
+        $published = 1;
+
+        $data = $this->mega_menu->getMenuVideoEvents($article_type, $parent, $category, $limit, $published);
+
+        if (empty($data)) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+    }
+
+    public function renderMenuReportEvents(request $request)
+    {
+        $data = $this->mega_menu->getMenuReportEvents();
+        if (empty($data)) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+    }
+    
+    public function renderMenuCategoryMultimedia(Request $request)
+    {
+        $data = $this->mega_menu->getMenuCategoryMultimedia();
+        if (empty($data)) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+    }
+
+    public function renderMenuFuturedMultimedia(Request $request)
+    {
+        $type_future = 'multimedia';
+        
+        $data = $this->mega_menu->getMenuFuturedMultimedia($type_future);
+        
+        if (empty($data)) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+    }
+
+    public function renderMenuLatestMultimedia(Request $request)
+    {
+        $article_type = 'multimedia';
+        $published = 1;
+        $limit = 6;
+
+        $data = $this->mega_menu->getMenuLatestMultimedia($article_type, $limit, $published);
+
+        if (empty($data) OR count($data) == 0) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+    }
+
     public function renderMenuAboutUs(Request $request)
     {
         $parent_id = 7;
