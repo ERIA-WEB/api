@@ -125,6 +125,104 @@ class MegaMenuModel
         return $data;
     }
 
+    public function getMenuEvents($article_type, $type, $today, $limit, $published)
+    {
+        $query = DB::connection('mysql2')
+                ->table('articles')
+                ->where('article_type', $article_type)
+                ->where('published', $published);
+
+        if ($type == 'past') {
+            $query->where('start_date', '<', $today);
+        } elseif ($type == 'today') {
+            $query->where('start_date', $today);
+        } elseif ($type == 'future') {
+            $query->where('start_date', '>=', $today);
+        }
+
+        $data = $query->orderBy('start_date', 'DESC')
+                ->limit($limit)
+                ->get();
+
+        return $data;
+    }
+
+    public function getMenuVideoEvents($article_type, $parent, $category, $limit, $published)
+    {
+        $data = DB::connection('mysql2')
+                ->table('articles')
+                ->select('articles.article_id', 'articles.uri', 'articles.title', 'articles.image_name', 'articles.posted_date', 'eria_expert_categories.category')
+                ->where('articles.article_type', $article_type)
+                ->where('parent', $parent)
+                ->where('eria_expert_categories.category', $category)
+                ->where('articles.published', $published)
+                ->leftJoin('eria_expert_categories', 'eria_expert_categories.ec_id', '=', 'articles.sub_experts')
+                ->orderBy('articles.posted_date', 'DESC')
+                ->limit($limit)
+                ->get();
+
+        return $data;
+    }
+
+    public function getMenuReportEvents()
+    {
+        $data = DB::connection('mysql2')
+                ->table('eria_menu_event_reports')
+                ->select('eria_menu_event_reports.id', 'eria_menu_event_reports.event_id', 'eria_menu_event_reports.modified_by', 'articles.article_id', 'articles.title', 'articles.uri', 'articles.posted_date')
+                ->leftJoin('articles', 'eria_menu_event_reports.event_id', '=', 'articles.article_id')
+                ->get();
+
+        return $data;
+    }
+
+    public function getMenuCategoryMultimedia()
+    {
+        $data = [
+            [
+                'category_name'     => 'Webinars',
+                'uri'               => 'webinar',
+            ],
+            [
+                'category_name'     => 'Videos',
+                'uri'               => 'video',
+            ],
+            [
+                'category_name'     => 'Podcasts',
+                'uri'               => 'podcasts',
+            ],
+        ];
+
+        return $data;
+    }
+
+    public function getMenuFuturedMultimedia($type_future)
+    {
+        $data = DB::connection('mysql2')
+                ->table('articles')
+                ->select('articles.*', 'eria_expert_categories.category')
+                ->where('articles.article_type', 'multimedia')
+                ->where('articles.feature', $type_future)
+                ->leftJoin('eria_expert_categories', 'eria_expert_categories.ec_id', '=', 'articles.sub_experts')
+                ->first();
+
+        return $data;
+    }
+
+    public function getMenuLatestMultimedia($article_type, $limit, $published)
+    {
+        $data = DB::connection('mysql2')
+                ->table('articles')
+                ->select('articles.*', 'eria_expert_categories.category')
+                ->where('articles.article_type', $article_type)
+                ->where('articles.published', $published)
+                ->leftJoin('eria_expert_categories', 'eria_expert_categories.ec_id', '=', 'articles.sub_experts')
+                ->orderBy('articles.posted_date', 'DESC')
+                ->limit($limit)
+                ->get();
+
+        return $data;
+    }
+
     public function getMenuAboutUs($parent_id, $is_delete, $published)
     {
         $data = DB::connection('mysql2')
