@@ -91,6 +91,16 @@ class MegaMenuModel
         return $data;
     }
 
+    public function getMenuFuturedUpdate($feature)
+    {
+        $data = DB::connection('mysql2')
+                ->table('articles')
+                ->where('feature', $feature)
+                ->first();
+
+        return $data;
+    }
+
     public function getMenuAboutUs($parent_id, $is_delete, $published)
     {
         $data = DB::connection('mysql2')
