@@ -94,3 +94,5 @@ $app->get('/get/multimedia/get/future', 	        'MegaMenuController@renderMenuF
 $app->get('/get/multimedia/latest', 	            'MegaMenuController@renderMenuLatestMultimedia');
 
 $app->get('/get/about-us', 	                    'MegaMenuController@renderMenuAboutUs');
+
+$app->get('get/people/get/categories',           'MegaMenuController@renderMenuCategoryPeople');
